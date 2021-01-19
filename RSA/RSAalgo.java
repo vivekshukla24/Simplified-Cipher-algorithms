@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 public class RSAalgo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
 
         Scanner s = new Scanner(System.in);
 
         RSAalgo rsa = new RSAalgo (1024);
-
+                                                                                                             // The part where user interacts with the program for input string.
         System.out.println("Enter your message to encrypt");
 
         String message=s.next();
@@ -46,9 +46,9 @@ public class RSAalgo {
     public synchronized BigInteger decrypt(BigInteger encryptedMessage) {
         return encryptedMessage.modPow(privateKey, modulus);
     }
-
-
-
+    
+    
+                                                                                                                                //Generation of public and private keys
     public synchronized void generateKeys(int bits) {
         SecureRandom r = new SecureRandom();
         BigInteger p = new BigInteger(bits / 2, 100, r);
