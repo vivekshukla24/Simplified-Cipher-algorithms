@@ -48,7 +48,7 @@ public class RSAalgo {
     }
     
     
-                                                                                                                                //Generation of public and private keys
+                                                                                                                                // Generation of public and private keys.
     public synchronized void generateKeys(int bits) {
         SecureRandom r = new SecureRandom();
         BigInteger p = new BigInteger(bits / 2, 100, r);
@@ -64,6 +64,11 @@ public class RSAalgo {
         }
 
         privateKey = publicKey.modInverse(m);
+        
+       // System.out.println(privateKey+"   ");
+                                                                                                                               // Only for cheaking purpose.
+       // System.out.println(publicKey+"    ");
+        
     }
 }
 
