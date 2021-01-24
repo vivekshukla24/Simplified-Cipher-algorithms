@@ -13,7 +13,7 @@ public class RSAalgo {
         Scanner s = new Scanner(System.in);
 
         RSAalgo rsa = new RSAalgo (1024);
-                                                                                                             // The part where user interacts with the program for input string.
+                                                                                                   // The part where user interacts with the program for input string.
         System.out.println("Enter your message to encrypt");
 
         String message=s.next();
