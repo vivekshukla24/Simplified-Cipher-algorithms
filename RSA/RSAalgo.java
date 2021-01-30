@@ -25,7 +25,6 @@ public class RSAalgo {
         System.out.println("Your decrypted Message"+"-->"+ rsa.decrypt(ciphertext));
 
     }
-
     private BigInteger modulus, privateKey, publicKey;
 
     public RSAalgo(int bits)
@@ -49,8 +48,8 @@ public class RSAalgo {
         return encryptedMessage.modPow(privateKey, modulus);
     }
     
-    
-                                                                                                                                // Generation of public and private keys.
+   
+                                                                                                                            // Generation of public and private keys.
     public synchronized void generateKeys(int bits) {
         SecureRandom r = new SecureRandom();
         BigInteger p = new BigInteger(bits / 2, 100, r);
